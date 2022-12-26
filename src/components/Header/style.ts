@@ -4,7 +4,7 @@ export const HeaderContainer = styled.header`
   width: 1120px;
   display: flex;
   justify-content: space-between;
-  margin: 2rem;
+  margin: 2rem 0;
   height: 2.5rem;
 
   nav {
@@ -23,8 +23,8 @@ export const HeaderContainer = styled.header`
 
     span:first-child {
       width: 8.94rem;
-      background: ${(props) => props.theme['purple-light']};
-      color: ${(props) => props.theme['purple-dark']};
+      background: ${(props) => props.theme.purpleLight};
+      color: ${(props) => props.theme.purpleDark};
       font-family: 'Roboto', sans-serif;
       font-size: 0.875rem;
       line-height: 1.5;
@@ -37,9 +37,12 @@ export const HeaderContainer = styled.header`
   }
 
   span:last-child {
-    background: ${(props) => props.theme['yellow-light']};
-    pointer svg {
-      color: ${(props) => props.theme['yellow-dark']};
+
+    background: ${(props) => props.theme.yellowLight};
+
+    svg {
+      color: ${(props) => props.theme.yellowDark};
+
     }
 
     .counter,
@@ -47,7 +50,7 @@ export const HeaderContainer = styled.header`
       position: absolute;
       top: -0.5rem;
       right: -0.5rem;
-      background: ${(props) => props.theme['yellow-dark']};
+      background: ${(props) => props.theme.yellowLight};
       border-radius: 50%;
       width: 1.25rem;
       height: 1.25rem;

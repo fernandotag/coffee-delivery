@@ -11,11 +11,11 @@ export const defaultTheme = {
   subtitle: '#403937',
   title: '#272221',
 
-  'purple-dark': '#4B2995',
+  purpleDark: '#4B2995',
   purple: '#8047F8',
-  'purple-light': '#EBE5F9',
+  purpleLight: '#EBE5F9',
 
-  'yellow-dark': '#C47F17',
+  yellowDark: '#C47F17',
   yellow: '#DBAC2C',
-  'yellow-light': '#F1E9C9',
+  yellowLight: '#F1E9C9',
 }
