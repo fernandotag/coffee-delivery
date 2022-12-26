@@ -1,10 +1,10 @@
 import { Intro } from '../../Intro'
-import { HomeContainer } from './styles'
+import { StyledHome } from './styles'
 
 export function Home() {
   return (
-    <HomeContainer>
+    <StyledHome>
       <Intro />
-    </HomeContainer>
+    </StyledHome>
   )
 }
