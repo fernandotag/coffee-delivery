@@ -18,6 +18,7 @@ export const HeaderContainer = styled.header`
       justify-content: center;
       padding: 0.5rem;
       position: relative;
+      cursor: pointer;
     }
 
     span:first-child {
@@ -37,12 +38,12 @@ export const HeaderContainer = styled.header`
 
   span:last-child {
     background: ${(props) => props.theme['yellow-light']};
-
-    svg {
+    pointer svg {
       color: ${(props) => props.theme['yellow-dark']};
     }
 
-    .counter {
+    .counter,
+    .counter:hover {
       position: absolute;
       top: -0.5rem;
       right: -0.5rem;
