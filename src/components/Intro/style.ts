@@ -6,6 +6,11 @@ export const IntroContainer = styled.div`
   gap: 3.5rem;
   padding: 5.875rem 0 6.75rem;
 
+  @media (max-width: 1024px) {
+    align-items: center;
+    text-align: center;
+  }
+
   h1 {
     font-size: 3rem;
     line-height: 1.3;
@@ -21,7 +26,8 @@ export const IntroContainer = styled.div`
   }
 
   img {
-    width: 29.75rem;
+    width: 100%;
+    max-width: 29.75rem;
   }
 `
 
@@ -30,6 +36,11 @@ export const StyledItems = styled.ul`
   display: flex;
   margin-top: 4.125rem;
   flex-wrap: wrap;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+  }
 
   li {
     font-family: 'Roboto', sans-serif;
@@ -42,6 +53,10 @@ export const StyledItems = styled.ul`
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    @media (max-width: 1024px) {
+      width: auto;
+    }
   }
 
   li:not(:last-of-type) {

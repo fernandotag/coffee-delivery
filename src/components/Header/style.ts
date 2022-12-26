@@ -1,11 +1,16 @@
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
-  width: 1120px;
+  max-width: 1120px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin: 2rem 0;
   height: 2.5rem;
+
+  @media (max-width: 1024px) {
+    padding: 0 16px;
+  }
 
   nav {
     display: flex;
