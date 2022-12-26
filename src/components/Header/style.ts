@@ -22,8 +22,8 @@ export const HeaderContainer = styled.header`
 
     span:first-child {
       width: 8.94rem;
-      background: ${(props) => props.theme['purple-light']};
-      color: ${(props) => props.theme['purple-dark']};
+      background: ${(props) => props.theme.purpleLight};
+      color: ${(props) => props.theme.purpleDark};
       font-family: 'Roboto', sans-serif;
       font-size: 0.875rem;
       line-height: 1.5;
@@ -36,17 +36,17 @@ export const HeaderContainer = styled.header`
   }
 
   span:last-child {
-    background: ${(props) => props.theme['yellow-light']};
+    background: ${(props) => props.theme.yellowLight};
 
     svg {
-      color: ${(props) => props.theme['yellow-dark']};
+      color: ${(props) => props.theme.yellowDark};
     }
 
     .counter {
       position: absolute;
       top: -0.5rem;
       right: -0.5rem;
-      background: ${(props) => props.theme['yellow-dark']};
+      background: ${(props) => props.theme.yellowLight};
       border-radius: 50%;
       width: 1.25rem;
       height: 1.25rem;
