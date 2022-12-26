@@ -37,12 +37,10 @@ export const HeaderContainer = styled.header`
   }
 
   span:last-child {
-
     background: ${(props) => props.theme.yellowLight};
 
     svg {
       color: ${(props) => props.theme.yellowDark};
-
     }
 
     .counter,
@@ -50,7 +48,7 @@ export const HeaderContainer = styled.header`
       position: absolute;
       top: -0.5rem;
       right: -0.5rem;
-      background: ${(props) => props.theme.yellowLight};
+      background: ${(props) => props.theme.yellowDark};
       border-radius: 50%;
       width: 1.25rem;
       height: 1.25rem;
