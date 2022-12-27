@@ -15,6 +15,7 @@ export function ItemCard({
   name,
   price,
   image,
+  tags,
 }: ItemCardProps) {
   const options = {
     style: 'decimal',
@@ -31,8 +32,9 @@ export function ItemCard({
         alt={`Xícara com ${name}`}
       />
       <ul className="tags">
-        <li>TRADICIONAL</li>
-        <li>GELADO</li>
+        {tags.map((tag) => (
+          <li key={tag}>{tag}</li>
+        ))}
       </ul>
       <h2>{name}</h2>
       <div className="description">{description}</div>

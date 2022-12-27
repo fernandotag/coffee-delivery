@@ -41,6 +41,7 @@ export const ItemContainer = styled.li`
       padding: 0.25rem 0.5rem;
       margin: 0;
       line-height: 1.3;
+      text-transform: uppercase;
     }
   }
 
