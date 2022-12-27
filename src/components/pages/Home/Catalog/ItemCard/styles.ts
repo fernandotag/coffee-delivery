@@ -8,7 +8,7 @@ export const ItemContainer = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 1.5rem;
+  padding: 0 1.25rem;
 
   @media (max-width: 1024px) {
     width: 44%;
