@@ -13,11 +13,11 @@ export const IntroContainer = styled.div`
     gap: 3.5rem;
     padding: 5.875rem 0 6.75rem;
     justify-content: center;
-  }
 
-  @media (max-width: 1024px) {
-    align-items: center;
-    text-align: center;
+    @media (max-width: 1024px) {
+      text-align: center;
+      flex-direction: column;
+    }
   }
 
   h1 {
@@ -90,7 +90,6 @@ export const StyledIcon = styled.span<StyledIconProps>`
   flex-wrap: wrap;
 
   svg {
-    width: 1rem;
     color: ${(props) => props.theme.white};
   }
 `

@@ -9,6 +9,10 @@ export const CatalogContainer = styled.div`
   color: ${(props) => props.theme.subtitle};
   margin-top: 2rem;
   margin-bottom: 9rem;
+
+  @media (max-width: 1024px) {
+    padding: 0 1rem;
+  }
 `
 
 export const CatalogList = styled.ul`

@@ -15,25 +15,25 @@ export function Intro() {
           <StyledItems>
             <li>
               <StyledIcon backgroundColor="yellowDark">
-                <ShoppingCart weight="fill"></ShoppingCart>
+                <ShoppingCart weight="fill" size={'1rem'}></ShoppingCart>
               </StyledIcon>
               <span>Compra simples e segura</span>
             </li>
             <li>
               <StyledIcon backgroundColor="text">
-                <Package weight="fill"></Package>
+                <Package weight="fill" size={'1rem'}></Package>
               </StyledIcon>
               Embalagem mantém o café intacto
             </li>
             <li>
               <StyledIcon backgroundColor="yellow">
-                <Timer weight="fill"></Timer>
+                <Timer weight="fill" size={'1rem'}></Timer>
               </StyledIcon>
               Entrega rápida e rastreada
             </li>
             <li>
               <StyledIcon backgroundColor="purple">
-                <Coffee weight="fill"></Coffee>
+                <Coffee weight="fill" size={'1rem'}></Coffee>
               </StyledIcon>
               O café chega fresquinho até você
             </li>

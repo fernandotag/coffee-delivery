@@ -10,6 +10,14 @@ export const ItemContainer = styled.li`
   align-items: center;
   padding: 0 1.5rem;
 
+  @media (max-width: 1024px) {
+    width: 44%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
   h2 {
     font-size: 1.25rem;
     line-height: 1.3;
