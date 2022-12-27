@@ -1,11 +1,16 @@
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
-  width: 1120px;
+  max-width: 1120px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin: 2rem 0;
   height: 2.5rem;
+
+  @media (max-width: 1024px) {
+    padding: 0 16px;
+  }
 
   nav {
     display: flex;
@@ -37,12 +42,10 @@ export const HeaderContainer = styled.header`
   }
 
   span:last-child {
-
     background: ${(props) => props.theme.yellowLight};
 
     svg {
       color: ${(props) => props.theme.yellowDark};
-
     }
 
     .counter,
@@ -50,7 +53,7 @@ export const HeaderContainer = styled.header`
       position: absolute;
       top: -0.5rem;
       right: -0.5rem;
-      background: ${(props) => props.theme.yellowLight};
+      background: ${(props) => props.theme.yellowDark};
       border-radius: 50%;
       width: 1.25rem;
       height: 1.25rem;

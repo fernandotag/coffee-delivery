@@ -1,10 +1,24 @@
 import styled from 'styled-components'
-import { defaultTheme } from '../../styles/themes/default'
+import { defaultTheme } from '../../../../styles/themes/default'
+import introBackground from '../assets/intro-bg.svg'
 
 export const IntroContainer = styled.div`
+  background-image: url(${introBackground});
   display: flex;
-  gap: 3.5rem;
-  padding: 5.875rem 0 6.75rem;
+  justify-content: center;
+
+  & > div {
+    max-width: 70rem;
+    display: flex;
+    gap: 3.5rem;
+    padding: 5.875rem 0 6.75rem;
+    justify-content: center;
+
+    @media (max-width: 1024px) {
+      text-align: center;
+      flex-direction: column;
+    }
+  }
 
   h1 {
     font-size: 3rem;
@@ -21,7 +35,8 @@ export const IntroContainer = styled.div`
   }
 
   img {
-    width: 29.75rem;
+    width: 100%;
+    max-width: 29.75rem;
   }
 `
 
@@ -30,6 +45,11 @@ export const StyledItems = styled.ul`
   display: flex;
   margin-top: 4.125rem;
   flex-wrap: wrap;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+  }
 
   li {
     font-family: 'Roboto', sans-serif;
@@ -42,6 +62,10 @@ export const StyledItems = styled.ul`
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    @media (max-width: 1024px) {
+      width: auto;
+    }
   }
 
   li:not(:last-of-type) {
@@ -66,7 +90,6 @@ export const StyledIcon = styled.span<StyledIconProps>`
   flex-wrap: wrap;
 
   svg {
-    width: 1rem;
     color: ${(props) => props.theme.white};
   }
 `
