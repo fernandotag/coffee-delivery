@@ -1,10 +1,19 @@
 import styled from 'styled-components'
-import { defaultTheme } from '../../styles/themes/default'
+import { defaultTheme } from '../../../../styles/themes/default'
+import introBackground from '../assets/intro-bg.svg'
 
 export const IntroContainer = styled.div`
+  background-image: url(${introBackground});
   display: flex;
-  gap: 3.5rem;
-  padding: 5.875rem 0 6.75rem;
+  justify-content: center;
+
+  & > div {
+    max-width: 70rem;
+    display: flex;
+    gap: 3.5rem;
+    padding: 5.875rem 0 6.75rem;
+    justify-content: center;
+  }
 
   @media (max-width: 1024px) {
     align-items: center;
