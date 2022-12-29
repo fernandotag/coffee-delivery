@@ -26,12 +26,11 @@ export const HeaderContainer = styled.header`
       cursor: pointer;
     }
 
-    span:first-child {
+    & > span:first-child {
       width: 8.94rem;
       background: ${(props) => props.theme.purpleLight};
       color: ${(props) => props.theme.purpleDark};
-      font-family: 'Roboto', sans-serif;
-      font-size: 0.875rem;
+      font: 0.875rem 'Roboto', sans-serif;
       line-height: 1.5;
       gap: 0.25rem;
 

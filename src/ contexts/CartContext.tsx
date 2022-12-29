@@ -16,6 +16,7 @@ interface ICartContextType {
   cart: Cart
   custumer: Custumer
   addItemToCart: (productId: string, qty: number) => void
+  removeItemFromCart: (productId: string, qty: number) => void
 }
 
 export const CartContext = createContext({} as ICartContextType)
@@ -49,8 +50,24 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
     }
   }
 
+  const removeItemFromCart = (productId: string, qty: number) => {
+    if (isItemInTheCart(productId)) {
+      const newCart = cart
+        .map((item: Product) => {
+          if (item.productId === productId) {
+            item.qty -= qty
+          }
+          return item
+        })
+        .filter((item) => item.qty > 0)
+      setCart(newCart)
+    }
+  }
+
   return (
-    <CartContext.Provider value={{ cart, custumer, addItemToCart }}>
+    <CartContext.Provider
+      value={{ cart, custumer, addItemToCart, removeItemFromCart }}
+    >
       <CatalogContextProvider>{children}</CatalogContextProvider>
     </CartContext.Provider>
   )

@@ -46,8 +46,7 @@ export const ItemContainer = styled.li`
   }
 
   .description {
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.875rem;
+    font: 0.875rem 'Roboto', sans-serif;
     color: ${(props) => props.theme.label};
     text-align: center;
     margin-bottom: 2.06rem;
@@ -72,8 +71,7 @@ export const ItemContainer = styled.li`
       color: ${(props) => props.theme.text};
 
       pre {
-        font-family: 'Roboto', sans-serif;
-        font-size: 0.875rem;
+        font: 0.875rem 'Roboto', sans-serif;
         font-weight: 400;
         display: inline;
       }
@@ -86,9 +84,8 @@ export const ItemContainer = styled.li`
       gap: 0.25rem;
       background: ${(props) => props.theme.button};
       border-radius: 6px;
-      font-size: 1rem;
       line-height: 1.3;
-      font-family: 'Roboto', sans-serif;
+      font: 1rem 'Roboto', sans-serif;
       padding: 0 0.53rem;
 
       svg {

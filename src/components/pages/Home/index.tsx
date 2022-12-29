@@ -1,12 +1,12 @@
 import { Catalog } from './Catalog'
 import { Intro } from './Intro'
-import { StyledHome } from './styles'
+import { HomeContainer } from './styles'
 
 export function Home() {
   return (
-    <StyledHome>
+    <HomeContainer>
       <Intro />
       <Catalog />
-    </StyledHome>
+    </HomeContainer>
   )
 }

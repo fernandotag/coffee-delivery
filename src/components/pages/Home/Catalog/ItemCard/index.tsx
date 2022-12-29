@@ -39,7 +39,6 @@ export function ItemCard({
     if (qty > 0) {
       const numberSet = qty - 1
       setQty(numberSet)
-      addItemToCart(id, qty)
     }
   }
 

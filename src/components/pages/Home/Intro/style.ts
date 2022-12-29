@@ -27,8 +27,7 @@ export const IntroContainer = styled.div`
   }
 
   h3 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.25rem;
+    font: 1.25rem 'Roboto', sans-serif;
     line-height: 1.3;
     color: ${(props) => props.theme.subtitle};
     margin-top: 1rem;
@@ -52,10 +51,9 @@ export const StyledItems = styled.ul`
   }
 
   li {
-    font-family: 'Roboto', sans-serif;
+    font: 1rem 'Roboto', sans-serif;
     width: 50%;
     height: 2rem;
-    font-size: 1rem;
     color: ${(props) => props.theme.text};
     line-height: 1.3;
     gap: 0.75rem;

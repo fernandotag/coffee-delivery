@@ -1,10 +1,9 @@
 import styled from 'styled-components'
 
-export const StyledHome = styled.main`
+export const HomeContainer = styled.main`
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
 
   & > div {
     width: 100%;
