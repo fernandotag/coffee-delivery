@@ -8,7 +8,7 @@ export const ItemContainer = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 1.5rem;
+  padding: 0 1.25rem;
 
   @media (max-width: 1024px) {
     width: 44%;
@@ -41,6 +41,7 @@ export const ItemContainer = styled.li`
       padding: 0.25rem 0.5rem;
       margin: 0;
       line-height: 1.3;
+      text-transform: uppercase;
     }
   }
 
@@ -94,6 +95,7 @@ export const ItemContainer = styled.li`
         color: ${(props) => props.theme.purple};
         width: 0.875rem;
         margin: 0.25rem;
+        cursor: pointer;
       }
     }
 
@@ -105,6 +107,7 @@ export const ItemContainer = styled.li`
       align-items: center;
       padding: 0.5rem;
       background-color: ${(props) => props.theme.purpleDark};
+      cursor: pointer;
 
       svg {
         color: ${(props) => props.theme.white};

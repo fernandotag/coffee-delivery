@@ -1,29 +1,83 @@
 import { ItemContainer } from './styles'
-import coffee from '../assets/coffees/expresso-tradicional.svg'
 import { Minus, Plus, ShoppingCart } from 'phosphor-react'
+import { useContext, useState } from 'react'
+import { CartContext } from '../../../../../ contexts/CartContext'
 
-export function ItemCard() {
+interface ItemCardProps {
+  id: string
+  image: string
+  tags: string[]
+  name: string
+  description: string
+  price: number
+}
+export function ItemCard({
+  id,
+  description,
+  name,
+  price,
+  image,
+  tags,
+}: ItemCardProps) {
+  const options = {
+    style: 'decimal',
+    currency: 'BRL',
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 3,
+  }
+  const formatNumber = new Intl.NumberFormat('pt-BR', options)
+  const [qty, setQty] = useState(0)
+
+  const { cart, addItemToCart } = useContext(CartContext)
+
+  const handleAddItem = () => {
+    const numberSet = qty + 1
+    setQty(numberSet)
+  }
+
+  const handleRemoveItem = () => {
+    if (qty > 0) {
+      const numberSet = qty - 1
+      setQty(numberSet)
+      addItemToCart(id, qty)
+    }
+  }
+
+  const handleAddItemToCart = () => {
+    if (qty > 0) {
+      addItemToCart(id, qty)
+    }
+    setQty(0)
+  }
+
   return (
     <ItemContainer>
-      <img src={coffee} alt="Xícara com expresso tradicional" />
+      <img
+        src={`src/components/pages/Home/Catalog/assets/coffees/${image}`}
+        alt={`Xícara com ${name}`}
+      />
       <ul className="tags">
-        <li>TRADICIONAL</li>
-        <li>GELADO</li>
+        {tags.map((tag) => (
+          <li key={tag}>{tag}</li>
+        ))}
       </ul>
-      <h2>Expresso Tradicional</h2>
-      <div className="description">
-        O tradicional café feito com água quente e grãos moídos
-      </div>
+      <h2>{name}</h2>
+      <div className="description">{description}</div>
       <div className="buy">
         <div className="price">
-          <pre>R$ </pre>9,90
+          <pre>R$ </pre>
+          {formatNumber.format(price)}
         </div>
         <div className="actions">
-          <Minus weight="bold"></Minus>
-          <span>2</span>
-          <Plus weight="bold"></Plus>
+          <Minus weight="bold" onClick={handleRemoveItem}></Minus>
+          <span>{qty}</span>
+          <Plus weight="bold" onClick={handleAddItem}></Plus>
         </div>
-        <button type="button" className="add-cart">
+        <button
+          type="button"
+          className="add-cart"
+          onClick={handleAddItemToCart}
+        >
           <ShoppingCart size={'1.375rem'} weight="fill"></ShoppingCart>
         </button>
       </div>
