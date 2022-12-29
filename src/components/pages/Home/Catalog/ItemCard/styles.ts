@@ -95,6 +95,7 @@ export const ItemContainer = styled.li`
         color: ${(props) => props.theme.purple};
         width: 0.875rem;
         margin: 0.25rem;
+        cursor: pointer;
       }
     }
 
@@ -106,6 +107,7 @@ export const ItemContainer = styled.li`
       align-items: center;
       padding: 0.5rem;
       background-color: ${(props) => props.theme.purpleDark};
+      cursor: pointer;
 
       svg {
         color: ${(props) => props.theme.white};

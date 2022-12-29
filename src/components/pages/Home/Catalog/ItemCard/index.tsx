@@ -1,5 +1,7 @@
 import { ItemContainer } from './styles'
 import { Minus, Plus, ShoppingCart } from 'phosphor-react'
+import { useContext, useState } from 'react'
+import { CartContext } from '../../../../../ contexts/CartContext'
 
 interface ItemCardProps {
   id: string
@@ -24,6 +26,29 @@ export function ItemCard({
     maximumFractionDigits: 3,
   }
   const formatNumber = new Intl.NumberFormat('pt-BR', options)
+  const [qty, setQty] = useState(0)
+
+  const { cart, addItemToCart } = useContext(CartContext)
+
+  const handleAddItem = () => {
+    const numberSet = qty + 1
+    setQty(numberSet)
+  }
+
+  const handleRemoveItem = () => {
+    if (qty > 0) {
+      const numberSet = qty - 1
+      setQty(numberSet)
+      addItemToCart(id, qty)
+    }
+  }
+
+  const handleAddItemToCart = () => {
+    if (qty > 0) {
+      addItemToCart(id, qty)
+    }
+    setQty(0)
+  }
 
   return (
     <ItemContainer>
@@ -44,11 +69,15 @@ export function ItemCard({
           {formatNumber.format(price)}
         </div>
         <div className="actions">
-          <Minus weight="bold"></Minus>
-          <span>2</span>
-          <Plus weight="bold"></Plus>
+          <Minus weight="bold" onClick={handleRemoveItem}></Minus>
+          <span>{qty}</span>
+          <Plus weight="bold" onClick={handleAddItem}></Plus>
         </div>
-        <button type="button" className="add-cart">
+        <button
+          type="button"
+          className="add-cart"
+          onClick={handleAddItemToCart}
+        >
           <ShoppingCart size={'1.375rem'} weight="fill"></ShoppingCart>
         </button>
       </div>

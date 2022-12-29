@@ -4,14 +4,15 @@ import { defaultTheme } from './styles/themes/default'
 import { BrowserRouter } from 'react-router-dom'
 import { Router } from './Routes'
 import { CatalogContextProvider } from './ contexts/CatalogContext'
+import { CartContextProvider } from './ contexts/CartContext'
 
 export default function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <BrowserRouter>
-        <CatalogContextProvider>
+        <CartContextProvider>
           <Router />
-        </CatalogContextProvider>
+        </CartContextProvider>
       </BrowserRouter>
       <GlobalStyle />
     </ThemeProvider>
