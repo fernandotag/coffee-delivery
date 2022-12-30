@@ -1,5 +1,5 @@
-import { createContext, ReactNode, useState } from 'react'
-import { CatalogContextProvider } from './CatalogContext'
+import { createContext, ReactNode, useContext, useState } from 'react'
+import { CatalogContext, CatalogContextProvider } from './CatalogContext'
 
 interface Product {
   productId: string
@@ -17,6 +17,7 @@ interface ICartContextType {
   custumer: Custumer
   addItemToCart: (productId: string, qty: number) => void
   removeItemFromCart: (productId: string, qty: number) => void
+  totalPriceItems: () => number
 }
 
 export const CartContext = createContext({} as ICartContextType)
@@ -26,6 +27,8 @@ interface CartContextProviderProps {
 }
 
 export function CartContextProvider({ children }: CartContextProviderProps) {
+  const { items } = useContext(CatalogContext)
+
   const [cart, setCart] = useState<Cart>([])
   const [custumer, setCustumer] = useState<Custumer>({
     name: '',
@@ -64,11 +67,29 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
     }
   }
 
+  const totalPriceItems = () => {
+    return cart
+      .map((item) => {
+        const productId = item.productId
+        console.log(productId)
+        const product = items.find((product) => product.id === productId)
+        console.log(product)
+        return product ? item.qty * product?.price : 0
+      })
+      .reduce((total, currenteValue) => total + currenteValue, 0)
+  }
+
   return (
     <CartContext.Provider
-      value={{ cart, custumer, addItemToCart, removeItemFromCart }}
+      value={{
+        cart,
+        custumer,
+        addItemToCart,
+        removeItemFromCart,
+        totalPriceItems,
+      }}
     >
-      <CatalogContextProvider>{children}</CatalogContextProvider>
+      {children}
     </CartContext.Provider>
   )
 }

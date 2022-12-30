@@ -91,22 +91,3 @@ export const CounterContainer = styled.div`
     width: 0.875rem;
   }
 `
-
-export const ButtonConfirmOrder = styled.button`
-  flex: 0;
-  border: 0;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  padding: 0.5rem;
-  background-color: ${(props) => props.theme.purpleDark};
-  cursor: pointer;
-
-  svg {
-    color: ${(props) => props.theme.white};
-  }
-
-  &:hover {
-    background-color: ${(props) => props.theme.purple};
-  }
-`

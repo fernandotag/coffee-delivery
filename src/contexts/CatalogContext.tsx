@@ -1,7 +1,8 @@
 import { createContext, ReactNode } from 'react'
 import { v4 as uuidv4 } from 'uuid'
+import { CartContextProvider } from './CartContext'
 
-export interface ICoffee {
+export interface Product {
   id: string
   image: string
   tags: string[]
@@ -11,7 +12,7 @@ export interface ICoffee {
 }
 
 interface ICatalogContextType {
-  items: ICoffee[]
+  items: Product[]
 }
 
 interface CatalogContextProviderProps {
@@ -148,7 +149,7 @@ export function CatalogContextProvider({
         items: coffeeList,
       }}
     >
-      {children}
+      <CartContextProvider>{children}</CartContextProvider>
     </CatalogContext.Provider>
   )
 }

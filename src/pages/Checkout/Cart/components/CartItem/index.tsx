@@ -1,13 +1,9 @@
 import { Minus, Plus, Trash } from 'phosphor-react'
 import { useContext } from 'react'
-import { CartContext } from '../../../../../../ contexts/CartContext'
-import { CatalogContext } from '../../../../../../ contexts/CatalogContext'
-import {
-  ActionsContainer,
-  ButtonConfirmOrder,
-  CartItemContainer,
-  CounterContainer,
-} from './styles'
+import { CartContext } from '../../../../../contexts/CartContext'
+import { CatalogContext } from '../../../../../contexts/CatalogContext'
+import { formatPriceWithCurrecy } from '../../../../../util/format'
+import { ActionsContainer, CartItemContainer, CounterContainer } from './styles'
 
 interface CardItemProps {
   id: string
@@ -19,14 +15,6 @@ interface CardItemProps {
 
 export function CartItem(props: CardItemProps) {
   const { id, name, price, qty, image } = props
-
-  const options = {
-    style: 'currency',
-    currency: 'BRL',
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 3,
-  }
-  const formatNumber = new Intl.NumberFormat('pt-BR', options)
 
   const { addItemToCart, removeItemFromCart } = useContext(CartContext)
   const { items } = useContext(CatalogContext)
@@ -44,9 +32,9 @@ export function CartItem(props: CardItemProps) {
   }
 
   return (
-    <CartItemContainer key={id}>
+    <CartItemContainer>
       <img
-        src={`src/components/pages/Home/Catalog/assets/coffees/${image}`}
+        src={`src/pages/Home/Catalog/assets/coffees/${image}`}
         alt={`Xícara com ${image}`}
       />
       <ActionsContainer>
@@ -68,7 +56,7 @@ export function CartItem(props: CardItemProps) {
           </button>
         </CounterContainer>
       </ActionsContainer>
-      <div className="price">{formatNumber.format(qty * price)}</div>
+      <div className="price">{formatPriceWithCurrecy(qty * price)}</div>
     </CartItemContainer>
   )
 }
