@@ -1,9 +1,6 @@
 import styled from 'styled-components'
 
 export const CartContainer = styled.div`
-  width: 28rem;
-  flex: 0.93rem;
-
   div.emptyList {
     font: bold 0.875rem 'Roboto', sans-serif;
   }

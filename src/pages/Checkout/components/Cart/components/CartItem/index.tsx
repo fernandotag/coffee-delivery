@@ -1,8 +1,8 @@
 import { Minus, Plus, Trash } from 'phosphor-react'
 import { useContext } from 'react'
-import { CartContext } from '../../../../../contexts/CartContext'
-import { CatalogContext } from '../../../../../contexts/CatalogContext'
-import { formatPriceWithCurrecy } from '../../../../../util/format'
+import { CartContext } from '../../../../../../contexts/CartContext'
+import { CatalogContext } from '../../../../../../contexts/CatalogContext'
+import { formatPriceWithCurrecy } from '../../../../../../util/format'
 import { ActionsContainer, CartItemContainer, CounterContainer } from './styles'
 
 interface CardItemProps {

@@ -1,7 +1,7 @@
 import { useContext } from 'react'
-import { CartContext } from '../../../contexts/CartContext'
-import { CatalogContext } from '../../../contexts/CatalogContext'
-import { formatPriceWithCurrecy } from '../../../util/format'
+import { CartContext } from '../../../../contexts/CartContext'
+import { CatalogContext } from '../../../../contexts/CatalogContext'
+import { formatPriceWithCurrecy } from '../../../../util/format'
 import { CartItem } from './components/CartItem'
 
 import {

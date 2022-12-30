@@ -1,14 +1,12 @@
-import { Cart } from './Cart'
-import { OrderForm } from './OrderForm'
-import { CheckoutContainer, OrderContainer } from './styles'
+import { Cart } from './components/Cart'
+import { OrderForm } from './components/OrderForm'
+import { CheckoutContainer } from './styles'
 
 export function Checkout() {
   return (
     <CheckoutContainer>
-      <OrderContainer>
-        <OrderForm />
-        <Cart />
-      </OrderContainer>
+      <OrderForm />
+      <Cart />
     </CheckoutContainer>
   )
 }
