@@ -2,7 +2,8 @@ import { MapPinLine } from 'phosphor-react'
 import { useFormContext } from 'react-hook-form'
 import { InputForm } from '../InputForm'
 import { MaskedInput } from '../MaskedInput'
-import { ShippingFormBody, ShippingFormHeader, ShippingSection } from './styles'
+import { SectionHeader } from '../SectionHeader'
+import { ShippingFormBody, ShippingSection } from './styles'
 
 interface FormStateError {
   errors: {
@@ -19,11 +20,11 @@ export function ShippingForm() {
 
   return (
     <ShippingSection>
-      <ShippingFormHeader>
-        <MapPinLine size={'1.375rem'}></MapPinLine>
-        <p>Endereço de Entrega</p>
-        <p>Informe o endeço onde deseja receber seu pedido</p>
-      </ShippingFormHeader>
+      <SectionHeader
+        icon={<MapPinLine size={'1.375rem'}></MapPinLine>}
+        title={'Endereço de Entrega'}
+        subtitle={'Informe o endeço onde deseja receber seu pedido'}
+      />
       <ShippingFormBody>
         <MaskedInput
           maskOptions={{
