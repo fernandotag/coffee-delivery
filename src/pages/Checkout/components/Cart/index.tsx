@@ -62,7 +62,7 @@ export function Cart() {
           </div>
         </OrderSummary>
 
-        <ButtonConfirmOrder>confirmar pedido</ButtonConfirmOrder>
+        <ButtonConfirmOrder type="submit">confirmar pedido</ButtonConfirmOrder>
       </ItemsSection>
     </CartContainer>
   )

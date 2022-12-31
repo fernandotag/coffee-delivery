@@ -1,14 +1,20 @@
 import styled from 'styled-components'
 
-export const InputContainer = styled.div<{
+export const InputWrapper = styled.div<{
   gridColumn: string
   gridRow: string
 }>`
   grid-column: ${(props) => props.gridColumn};
   grid-row: ${(props) => props.gridRow};
+`
+export const InputContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: end;
+
+  div {
+    width: 100%;
+  }
 `
 
 export const RightText = styled.p`
@@ -32,4 +38,11 @@ export const StyledInput = styled.input`
   & ::placeholder {
     color: ${(props) => props.theme.label};
   }
+`
+
+export const InputError = styled.div`
+  width: 100%;
+  color: red;
+  font: 0.7rem 'Roboto', sans-serif;
+  margin-top: 0.2rem;
 `
