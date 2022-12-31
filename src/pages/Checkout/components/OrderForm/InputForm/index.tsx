@@ -1,4 +1,4 @@
-import { InputHTMLAttributes, forwardRef } from 'react'
+import React, { forwardRef, InputHTMLAttributes, createRef } from 'react'
 import {
   InputContainer,
   InputError,
@@ -13,17 +13,16 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   textRight?: string
   className?: string
   error?: string
-  mask?: string
+  ref: string
 }
 
 export const InputForm = forwardRef<HTMLInputElement, InputProps>(
-  (
-    { textRight, gridColumn, gridRow, className, error, mask, ...attr },
-    ref,
-  ) => {
+  (props, ref) => {
+    const { textRight, gridColumn, gridRow, className, error, ...attr } = props
+
     return (
       <InputWrapper
-        className={className}
+        className={props.className}
         gridColumn={gridColumn}
         gridRow={gridRow}
       >
