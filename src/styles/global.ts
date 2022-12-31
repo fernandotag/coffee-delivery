@@ -23,4 +23,8 @@ export const GlobalStyle = createGlobalStyle`
     font: 1rem 'Baloo 2', sans-serif;
     font-weight: 400;
   }
+
+  textarea:focus, input:focus{
+    outline: none;
+  }
 `

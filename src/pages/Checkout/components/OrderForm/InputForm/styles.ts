@@ -38,6 +38,10 @@ export const StyledInput = styled.input`
   & ::placeholder {
     color: ${(props) => props.theme.label};
   }
+
+  &:focus {
+    border: 1px solid ${(props) => props.theme.yellow};
+  }
 `
 
 export const InputError = styled.div`

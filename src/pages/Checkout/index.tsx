@@ -12,13 +12,13 @@ enum PaymentMethod {
 }
 
 const checkoutFormValidatorSchema = zod.object({
-  zipCode: zod.string().min(1, 'Zip-code is required. Please type this field'),
-  street: zod.string().min(1, 'Fill this field'),
-  number: zod.string().min(1, 'Fill this field'),
+  zipCode: zod.string().min(8, 'Zip-code is required. Please type this field'),
+  street: zod.string().min(1, 'Street is required. Fill this field'),
+  number: zod.string().min(1, 'Number is required. Fill this field'),
   complement: zod.string().nullable(),
-  district: zod.string().min(1, 'Fill this field'),
-  city: zod.string().min(10, 'Fill this field'),
-  uf: zod.string().min(1, 'Fill this field'),
+  district: zod.string().min(1, 'District is required. Fill this field'),
+  city: zod.string().min(1, 'City is required. Fill this field'),
+  state: zod.string().min(1, 'State is required. Fill this field'),
 })
 
 type OrderData = zod.infer<typeof checkoutFormValidatorSchema>
