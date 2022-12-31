@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { CatalogContext } from '../../../../ contexts/CatalogContext'
+import { CatalogContext } from '../../../contexts/CatalogContext'
 import { ItemCard } from './ItemCard'
 import { CatalogContainer, CatalogList } from './styles'
 

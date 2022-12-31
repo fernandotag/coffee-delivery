@@ -17,11 +17,15 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     background: ${(props) => props.theme.background};
+    min-height: 100vh;
   }
 
   body, input, textarea, button {
-    font-family: 'Baloo 2', sans-serif;
+    font: 1rem 'Baloo 2', sans-serif;
     font-weight: 400;
-    font-size: 1rem;
+  }
+
+  textarea:focus, input:focus{
+    outline: none;
   }
 `

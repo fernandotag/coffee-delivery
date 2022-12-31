@@ -1,7 +1,8 @@
 import { ItemContainer } from './styles'
 import { Minus, Plus, ShoppingCart } from 'phosphor-react'
 import { useContext, useState } from 'react'
-import { CartContext } from '../../../../../ contexts/CartContext'
+import { CartContext } from '../../../../contexts/CartContext'
+import { formatPrice } from '../../../../util/format'
 
 interface ItemCardProps {
   id: string
@@ -19,16 +20,9 @@ export function ItemCard({
   image,
   tags,
 }: ItemCardProps) {
-  const options = {
-    style: 'decimal',
-    currency: 'BRL',
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 3,
-  }
-  const formatNumber = new Intl.NumberFormat('pt-BR', options)
   const [qty, setQty] = useState(0)
 
-  const { cart, addItemToCart } = useContext(CartContext)
+  const { addItemToCart } = useContext(CartContext)
 
   const handleAddItem = () => {
     const numberSet = qty + 1
@@ -39,7 +33,6 @@ export function ItemCard({
     if (qty > 0) {
       const numberSet = qty - 1
       setQty(numberSet)
-      addItemToCart(id, qty)
     }
   }
 
@@ -53,7 +46,7 @@ export function ItemCard({
   return (
     <ItemContainer>
       <img
-        src={`src/components/pages/Home/Catalog/assets/coffees/${image}`}
+        src={`src/pages/Home/Catalog/assets/coffees/${image}`}
         alt={`Xícara com ${name}`}
       />
       <ul className="tags">
@@ -66,7 +59,7 @@ export function ItemCard({
       <div className="buy">
         <div className="price">
           <pre>R$ </pre>
-          {formatNumber.format(price)}
+          {formatPrice(price)}
         </div>
         <div className="actions">
           <Minus weight="bold" onClick={handleRemoveItem}></Minus>
