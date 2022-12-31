@@ -17,6 +17,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     background: ${(props) => props.theme.background};
+    min-height: 100vh;
   }
 
   body, input, textarea, button {

@@ -34,7 +34,6 @@ export function ShippingForm() {
           gridRow="1"
           placeholder="CEP"
           type="text"
-          mask="99999-999"
           {...register('zipCode')}
           error={errors.zipCode?.message}
         />

@@ -19,6 +19,11 @@ const checkoutFormValidatorSchema = zod.object({
   district: zod.string().min(1, 'District is required. Fill this field'),
   city: zod.string().min(1, 'City is required. Fill this field'),
   state: zod.string().min(1, 'State is required. Fill this field'),
+  paymentMethod: zod.nativeEnum(PaymentMethod, {
+    errorMap: () => {
+      return { message: 'Select a paymentMethods' }
+    },
+  }),
 })
 
 type OrderData = zod.infer<typeof checkoutFormValidatorSchema>

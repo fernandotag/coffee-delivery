@@ -40,7 +40,7 @@ export const StyledInput = styled.input`
   }
 
   &:focus {
-    border: 1px solid ${(props) => props.theme.yellow};
+    border-color: ${({ theme }) => theme.purple};
   }
 `
 
