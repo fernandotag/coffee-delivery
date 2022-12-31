@@ -28,4 +28,10 @@ export const GlobalStyle = createGlobalStyle`
   textarea:focus, input:focus{
     outline: none;
   }
+
+  @media (max-width: 768px) {
+    html {
+      font-size: 87.5%;
+    }
+  }
 `

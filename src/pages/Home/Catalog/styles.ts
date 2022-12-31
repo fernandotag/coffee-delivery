@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const CatalogContainer = styled.div`
+  margin: 0 auto;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -9,10 +10,6 @@ export const CatalogContainer = styled.div`
   color: ${(props) => props.theme.subtitle};
   margin-top: 2rem;
   margin-bottom: 9rem;
-
-  @media (max-width: 1024px) {
-    padding: 0 1rem;
-  }
 `
 
 export const CatalogList = styled.ul`

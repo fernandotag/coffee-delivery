@@ -110,8 +110,13 @@ export const ItemContainer = styled.li`
         color: ${(props) => props.theme.white};
       }
 
-      &:hover {
+      &:not(:disabled):hover {
         background-color: ${(props) => props.theme.purple};
+      }
+
+      &:disabled {
+        opacity: 0.7;
+        cursor: default;
       }
     }
   }

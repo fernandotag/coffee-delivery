@@ -14,4 +14,8 @@ export const PaymentOptionsContainer = styled.div`
   & > * {
     flex: 1;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `

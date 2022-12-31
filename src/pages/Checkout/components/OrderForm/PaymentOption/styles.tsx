@@ -2,12 +2,9 @@ import styled from 'styled-components'
 
 export const PaymentOptionContainer = styled.div`
   input {
+    position: absolute;
     visibility: hidden;
     appearance: none;
-  }
-  input:checked + label > div {
-    background: ${({ theme }) => theme.purpleLight};
-    border-color: ${({ theme }) => theme.purple};
   }
 `
 

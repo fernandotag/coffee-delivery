@@ -9,7 +9,7 @@ export const HomeContainer = styled.main`
     width: 100%;
 
     @media (max-width: 1024px) {
-      margin: 0 16px;
+      padding: 0 1rem;
     }
   }
 `

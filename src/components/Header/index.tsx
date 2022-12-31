@@ -27,11 +27,11 @@ export function Header() {
       </span>
       <nav>
         <span>
-          <MapPin weight="fill" size={22} /> Porto Alegre, RS
+          <MapPin weight="fill" size={'1.375rem'} /> Porto Alegre, RS
         </span>
         <NavLink to={'/checkout'}>
           <span>
-            <ShoppingCart weight="fill" size={22} />
+            <ShoppingCart weight="fill" size={'1.375rem'} />
             <span className="counter">{totaItemsCart}</span>
           </span>
         </NavLink>

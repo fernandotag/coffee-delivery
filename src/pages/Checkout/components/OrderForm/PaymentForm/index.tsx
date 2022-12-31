@@ -8,15 +8,15 @@ import { PaymantFormContainer, PaymentOptionsContainer } from './styles'
 export const paymentMethods = {
   credit: {
     label: 'Credit Card',
-    icon: <CreditCard size={16} />,
+    icon: <CreditCard size={'1rem'} />,
   },
   debit: {
     label: 'Debit Card',
-    icon: <Bank size={16} />,
+    icon: <Bank size={'1rem'} />,
   },
   money: {
     label: 'Money',
-    icon: <Money size={16} />,
+    icon: <Money size={'1rem'} />,
   },
 }
 

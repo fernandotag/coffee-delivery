@@ -70,6 +70,7 @@ export function ItemCard({
           type="button"
           className="add-cart"
           onClick={handleAddItemToCart}
+          disabled={qty === 0}
         >
           <ShoppingCart size={'1.375rem'} weight="fill"></ShoppingCart>
         </button>
