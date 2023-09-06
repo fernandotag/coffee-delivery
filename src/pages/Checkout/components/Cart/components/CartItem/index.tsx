@@ -40,11 +40,11 @@ export function CartItem(props: CardItemProps) {
       <ActionsContainer>
         <div className="name">{name}</div>
         <CounterContainer>
-          <button className="remove">
+          <button className="remove" type="button">
             <Minus weight="bold" onClick={handleRemoveItemToCart}></Minus>
           </button>
           <div className="counter">{qty}</div>
-          <button className="add">
+          <button className="add" type="button">
             <Plus weight="bold" onClick={handleAddItemToCart}></Plus>
           </button>
           <button

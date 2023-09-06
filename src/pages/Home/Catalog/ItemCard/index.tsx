@@ -62,9 +62,13 @@ export function ItemCard({
           {formatPrice(price)}
         </div>
         <div className="actions">
-          <Minus weight="bold" onClick={handleRemoveItem}></Minus>
-          <span>{qty}</span>
-          <Plus weight="bold" onClick={handleAddItem}></Plus>
+          <button className="remove" type="button">
+            <Minus weight="bold" onClick={handleRemoveItem}></Minus>
+          </button>
+          <div className="counter">{qty}</div>
+          <button className="add" type="button">
+            <Plus weight="bold" onClick={handleAddItem}></Plus>
+          </button>
         </div>
         <button
           type="button"
