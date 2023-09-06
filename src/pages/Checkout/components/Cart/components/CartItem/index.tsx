@@ -1,7 +1,6 @@
 import { Minus, Plus, Trash } from 'phosphor-react'
 import { useContext } from 'react'
 import { CartContext } from '../../../../../../contexts/CartContext'
-import { CatalogContext } from '../../../../../../contexts/CatalogContext'
 import { formatPriceWithCurrecy } from '../../../../../../util/format'
 import { ActionsContainer, CartItemContainer, CounterContainer } from './styles'
 
@@ -17,7 +16,6 @@ export function CartItem(props: CardItemProps) {
   const { id, name, price, qty, image } = props
 
   const { addItemToCart, removeItemFromCart } = useContext(CartContext)
-  const { items } = useContext(CatalogContext)
 
   const handleAddItemToCart = () => {
     addItemToCart(id, 1)

@@ -4,6 +4,8 @@ import { CheckoutContainer } from './styles'
 import * as zod from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { FormProvider, useForm } from 'react-hook-form'
+import { useContext } from 'react'
+import { CartContext } from '../../contexts/CartContext'
 
 enum PaymentMethod {
   credit = 'credit',
@@ -31,14 +33,16 @@ type OrderData = zod.infer<typeof checkoutFormValidatorSchema>
 type ConfirmOrderFormData = OrderData
 
 export function Checkout() {
+  const { checkout, confirmOrder } = useContext(CartContext)
+
   const checkoutForm = useForm<ConfirmOrderFormData>({
     resolver: zodResolver(checkoutFormValidatorSchema),
   })
 
   const { handleSubmit, reset } = checkoutForm
-  console.log(checkoutForm.formState.errors)
   function handleConfirmOrder(data: ConfirmOrderFormData) {
-    console.log(data)
+    confirmOrder(data)
+    console.log(checkout)
   }
 
   return (

@@ -1,5 +1,5 @@
 import { createContext, ReactNode, useContext, useState } from 'react'
-import { CatalogContext, CatalogContextProvider } from './CatalogContext'
+import { CatalogContext } from './CatalogContext'
 
 interface Product {
   productId: string
@@ -8,16 +8,24 @@ interface Product {
 
 interface Cart extends Array<Product> {}
 
-interface Custumer {
-  name: string
+interface Checkout {
+  zipCode: string
+  street: string
+  number: string
+  complement: string | null
+  district: string
+  city: string
+  state: string
+  paymentMethod: string
 }
 
 interface ICartContextType {
   cart: Cart
-  custumer: Custumer
+  checkout?: Checkout
   addItemToCart: (productId: string, qty: number) => void
   removeItemFromCart: (productId: string, qty: number) => void
   totalPriceItems: () => number
+  confirmOrder: (checkout: Checkout) => void
 }
 
 export const CartContext = createContext({} as ICartContextType)
@@ -30,9 +38,7 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
   const { items } = useContext(CatalogContext)
 
   const [cart, setCart] = useState<Cart>([])
-  const [custumer, setCustumer] = useState<Custumer>({
-    name: '',
-  })
+  const [checkout, setCheckout] = useState<Checkout>()
 
   function isItemInTheCart(productId: string): boolean {
     return !!cart.find((item) => item.productId === productId)
@@ -71,22 +77,25 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
     return cart
       .map((item) => {
         const productId = item.productId
-        console.log(productId)
         const product = items.find((product) => product.id === productId)
-        console.log(product)
         return product ? item.qty * product?.price : 0
       })
       .reduce((total, currenteValue) => total + currenteValue, 0)
+  }
+
+  const confirmOrder = (checkout: Checkout) => {
+    setCheckout(checkout)
   }
 
   return (
     <CartContext.Provider
       value={{
         cart,
-        custumer,
+        checkout,
         addItemToCart,
         removeItemFromCart,
         totalPriceItems,
+        confirmOrder,
       }}
     >
       {children}

@@ -14,7 +14,6 @@ export function Header() {
       .map((cart) => cart.qty)
       .reduce((total, currentValue) => total + currentValue, 0)
     setTotaItemsCart(totaItems)
-    console.log(cart)
   }, [cart])
 
   return (
