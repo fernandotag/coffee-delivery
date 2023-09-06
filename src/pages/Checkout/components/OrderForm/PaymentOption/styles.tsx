@@ -6,6 +6,11 @@ export const PaymentOptionContainer = styled.div`
     visibility: hidden;
     appearance: none;
   }
+
+  :has(input[type='radio']:checked) div {
+    background: ${({ theme }) => theme.purpleLight};
+    border-color: ${({ theme }) => theme.purple};
+  }
 `
 
 export const ContentContainer = styled.div`
