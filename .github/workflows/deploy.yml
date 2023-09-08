@@ -23,10 +23,10 @@ jobs:
           node-version: 16.x
 
       - name: Installing NPM packages
-        run: yarn install
+        run: npm ci
 
       - name: Building project
-        run: yarn build
+        run: npm run build
 
       - name: Uploading production-ready build files
         uses: actions/upload-artifact@v2
@@ -35,7 +35,8 @@ jobs:
           path: ./dist
 
   deploy:
-    permissions:
+
+        permissions:
       contents: write
     name: Deploy
     needs: build
