@@ -1,11 +1,18 @@
 import { MapPin, Clock, CurrencyDollar } from 'phosphor-react'
 import { CheckoutDataContainer, StyledIcon, StyledItems } from './styles'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { CartContext } from '../../../../contexts/CartContext'
 import { paymentMethods } from '../../../Checkout/components/OrderForm/PaymentForm'
+import { useNavigate } from 'react-router-dom'
 
 export function CheckoutData() {
   const { checkout } = useContext(CartContext)
+
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if (!checkout) navigate('/')
+  }, [checkout, navigate])
 
   const selectedPaymentMethod = paymentMethods
     .filter((method) => checkout?.paymentMethod === method.key)
