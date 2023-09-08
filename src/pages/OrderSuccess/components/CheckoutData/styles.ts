@@ -3,8 +3,8 @@ import { defaultTheme } from '../../../../styles/themes/default'
 
 export const CheckoutDataContainer = styled.div`
   display: grid;
-  grid: 1fr;
-  width: 32.875rem;
+  grid-template-columns: 1fr;
+  width: 100%;
   padding: 2.5rem;
   gap: 2rem;
   position: relative;
@@ -38,15 +38,15 @@ export const StyledItems = styled.ul`
   }
 
   li {
+    width: 100%;
     font: 1rem 'Roboto', sans-serif;
     color: ${(props) => props.theme.text};
     gap: 0.75rem;
-    display: flex;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
-
     @media (max-width: 1024px) {
-      width: auto;
+      width: 100%;
     }
   }
 `

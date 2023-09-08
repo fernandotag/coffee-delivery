@@ -1,10 +1,9 @@
 import styled from 'styled-components'
 
 export const SuccessContainer = styled.main`
-  width: 100%;
   display: grid;
   margin-top: 5rem;
-  grid-template-columns: 40rem 28rem;
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
   justify-content: center;
   align-items: end;
@@ -22,5 +21,14 @@ export const SuccessContainer = styled.main`
 
   #subtitle {
     margin-bottom: 2.5rem;
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  img {
+    width: 100%;
   }
 `
