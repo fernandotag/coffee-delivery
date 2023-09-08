@@ -8,7 +8,7 @@ import { CatalogContextProvider } from './contexts/CatalogContext'
 export default function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <BrowserRouter>
+      <BrowserRouter basename={window.location.pathname || ''}>
         <CatalogContextProvider>
           <Router />
         </CatalogContextProvider>
