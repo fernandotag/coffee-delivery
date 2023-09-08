@@ -393,7 +393,7 @@ Error generating stack: `+s.message+`
   @media (max-width: 768px) {
     flex-direction: column;
   }
-`,V0=[{key:"credit",label:"Cartão de Crédito",icon:C(qk,{size:"1rem"})},{key:"debit",label:"Cartão de Débito",icon:C(Hk,{size:"1rem"})},{key:"money",label:"Dinheiro",icon:C(i2,{size:"1rem"})}];function jx(){var r;const{register:e,formState:{errors:t}}=g0(),n=(r=t==null?void 0:t.paymentMethod)==null?void 0:r.message;return ne(Rx,{children:[C(D0,{icon:C(t0,{size:"1.375rem"}),title:"Pagamento",subtitle:"O pagamento é feito na entega. Escolha a forma que desejar pagar"}),C(Tx,{children:V0.map(({icon:i,label:s,key:o})=>C(b0,{id:o,icon:i,label:s,value:o,...e("paymentMethod")},s))}),n&&C(C0,{children:n})]})}function Ox(){return ne(w2,{children:[C("h3",{children:"Complete seu pedido"}),C(Ax,{}),C(jx,{})]})}const Mx=pe.form`
+`,V0=[{key:"credit",label:"Cartão de Crédito",icon:C(qk,{size:"1rem"})},{key:"debit",label:"Cartão de Débito",icon:C(Hk,{size:"1rem"})},{key:"money",label:"Dinheiro",icon:C(i2,{size:"1rem"})}];function jx(){var r;const{register:e,formState:{errors:t}}=g0(),n=(r=t==null?void 0:t.paymentMethod)==null?void 0:r.message;return ne(Rx,{children:[C(D0,{icon:C(t0,{size:"1.375rem"}),title:"Pagamento",subtitle:"O pagamento é feito na entrega. Escolha a forma que desejar pagar"}),C(Tx,{children:V0.map(({icon:i,label:s,key:o})=>C(b0,{id:o,icon:i,label:s,value:o,...e("paymentMethod")},s))}),n&&C(C0,{children:n})]})}function Ox(){return ne(w2,{children:[C("h3",{children:"Complete seu pedido"}),C(Ax,{}),C(jx,{})]})}const Mx=pe.form`
   width: 100%;
   display: grid;
   grid-template-columns: 40rem 28rem;
