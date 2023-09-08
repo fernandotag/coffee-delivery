@@ -1,6 +1,6 @@
 {
   "name": "coffee-delivery",
-  "private": true,
+  "homepage": "https://fernandotag.github.io/coffee-delivery/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
