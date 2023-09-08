@@ -587,7 +587,7 @@ Error generating stack: `+s.message+`
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
-`;function Hx(){const{items:e}=S.useContext(Ya);return ne(zx,{children:[C("h1",{children:"Nossos cafés"}),C(Ux,{children:e.map(t=>C(Wx,{...t},t.id))})]})}const Zx="/assets/intro-bg-f8411067.svg",Qx=pe.div`
+`;function Hx(){const{items:e}=S.useContext(Ya);return ne(zx,{children:[C("h1",{children:"Nossos cafés"}),C(Ux,{children:e.map(t=>C(Wx,{...t},t.id))})]})}const Zx="/coffee-delivery/assets/intro-bg-f8411067.svg",Qx=pe.div`
   background-image: url(${Zx});
   display: flex;
   justify-content: center;
@@ -665,7 +665,7 @@ Error generating stack: `+s.message+`
   svg {
     color: ${e=>e.theme.white};
   }
-`,Gx="/assets/intro-coffee-deaa454e.svg";function Kx(){return C(Qx,{children:ne("div",{children:[ne("div",{children:[C("h1",{children:"Encontre o café perfeito para qualquer hora do dia"}),C("h3",{children:"Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora"}),ne(Yx,{children:[ne("li",{children:[C(Xs,{backgroundColor:"yellowDark",children:C(id,{weight:"fill",size:"1rem"})}),C("span",{children:"Compra simples e segura"})]}),ne("li",{children:[C(Xs,{backgroundColor:"text",children:C(Hk,{weight:"fill",size:"1rem"})}),"Embalagem mantém o café intacto"]}),ne("li",{children:[C(Xs,{backgroundColor:"yellow",children:C(Gk,{weight:"fill",size:"1rem"})}),"Entrega rápida e rastreada"]}),ne("li",{children:[C(Xs,{backgroundColor:"purple",children:C(Mk,{weight:"fill",size:"1rem"})}),"O café chega fresquinho até você"]})]})]}),C("img",{src:Gx,alt:"A thermo cup of coffee"})]})})}const qx=pe.main`
+`,Gx="/coffee-delivery/assets/intro-coffee-deaa454e.svg";function Kx(){return C(Qx,{children:ne("div",{children:[ne("div",{children:[C("h1",{children:"Encontre o café perfeito para qualquer hora do dia"}),C("h3",{children:"Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora"}),ne(Yx,{children:[ne("li",{children:[C(Xs,{backgroundColor:"yellowDark",children:C(id,{weight:"fill",size:"1rem"})}),C("span",{children:"Compra simples e segura"})]}),ne("li",{children:[C(Xs,{backgroundColor:"text",children:C(Hk,{weight:"fill",size:"1rem"})}),"Embalagem mantém o café intacto"]}),ne("li",{children:[C(Xs,{backgroundColor:"yellow",children:C(Gk,{weight:"fill",size:"1rem"})}),"Entrega rápida e rastreada"]}),ne("li",{children:[C(Xs,{backgroundColor:"purple",children:C(Mk,{weight:"fill",size:"1rem"})}),"O café chega fresquinho até você"]})]})]}),C("img",{src:Gx,alt:"A thermo cup of coffee"})]})})}const qx=pe.main`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -741,7 +741,7 @@ Error generating stack: `+s.message+`
   span:last-child:hover {
     background: ${e=>e.theme.yellow};
   }
-`,e8="/assets/logo-coffee-delivery-37e51589.svg";function t8(){const{cart:e}=S.useContext(wr),[t,n]=S.useState(0);return S.useEffect(()=>{const r=e.map(i=>i.qty).reduce((i,s)=>i+s,0);n(r)},[e]),ne(Jx,{children:[C("span",{children:ne(Vf,{to:"/",children:[" ",C("img",{src:e8,alt:""})]})}),ne("nav",{children:[ne("span",{children:[C(n0,{weight:"fill",size:"1.375rem"})," Porto Alegre, RS"]}),C(Vf,{to:"/checkout",children:ne("span",{children:[C(id,{weight:"fill",size:"1.375rem"}),C("span",{className:"counter",children:t})]})})]})]})}const n8=pe.div`
+`,e8="/coffee-delivery/assets/logo-coffee-delivery-37e51589.svg";function t8(){const{cart:e}=S.useContext(wr),[t,n]=S.useState(0);return S.useEffect(()=>{const r=e.map(i=>i.qty).reduce((i,s)=>i+s,0);n(r)},[e]),ne(Jx,{children:[C("span",{children:ne(Vf,{to:"/",children:[" ",C("img",{src:e8,alt:""})]})}),ne("nav",{children:[ne("span",{children:[C(n0,{weight:"fill",size:"1.375rem"})," Porto Alegre, RS"]}),C(Vf,{to:"/checkout",children:ne("span",{children:[C(id,{weight:"fill",size:"1.375rem"}),C("span",{className:"counter",children:t})]})})]})]})}const n8=pe.div`
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
@@ -835,4 +835,4 @@ Error generating stack: `+s.message+`
   img {
     width: 100%;
   }
-`,l8="/assets/delivery-56b971f5.svg";function u8(){return ne(a8,{children:[ne("div",{children:[C("h2",{children:"Uhu! Pedido confirmado"}),C("p",{id:"subtitle",children:"Agora é só aguardar que logo o café chegará até você"}),C(o8,{})]}),C("img",{src:l8,alt:""})]})}function c8(){return C(uk,{children:ne(zi,{path:"/",element:C(r8,{}),children:[C(zi,{path:"/",element:C(Xx,{})}),C(zi,{path:"/checkout",element:C($x,{})}),C(zi,{path:"/success",element:C(u8,{})})]})})}function d8(){return ne(mv,{theme:kv,children:[C(mk,{children:C(Ck,{children:C(c8,{})})}),C(vv,{})]})}Ml.createRoot(document.getElementById("root")).render(C(u.StrictMode,{children:C(d8,{})}));
+`,l8="/coffee-delivery/assets/delivery-56b971f5.svg";function u8(){return ne(a8,{children:[ne("div",{children:[C("h2",{children:"Uhu! Pedido confirmado"}),C("p",{id:"subtitle",children:"Agora é só aguardar que logo o café chegará até você"}),C(o8,{})]}),C("img",{src:l8,alt:""})]})}function c8(){return C(uk,{children:ne(zi,{path:"/",element:C(r8,{}),children:[C(zi,{path:"/",element:C(Xx,{})}),C(zi,{path:"/checkout",element:C($x,{})}),C(zi,{path:"/success",element:C(u8,{})})]})})}function d8(){return ne(mv,{theme:kv,children:[C(mk,{children:C(Ck,{children:C(c8,{})})}),C(vv,{})]})}Ml.createRoot(document.getElementById("root")).render(C(u.StrictMode,{children:C(d8,{})}));
