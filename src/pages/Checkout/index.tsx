@@ -6,6 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { FormProvider, useForm } from 'react-hook-form'
 import { useContext } from 'react'
 import { CartContext } from '../../contexts/CartContext'
+import { useNavigate } from 'react-router-dom'
 
 enum PaymentMethod {
   credit = 'credit',
@@ -33,7 +34,8 @@ type OrderData = zod.infer<typeof checkoutFormValidatorSchema>
 type ConfirmOrderFormData = OrderData
 
 export function Checkout() {
-  const { checkout, confirmOrder } = useContext(CartContext)
+  const navigate = useNavigate()
+  const { confirmOrder } = useContext(CartContext)
 
   const checkoutForm = useForm<ConfirmOrderFormData>({
     resolver: zodResolver(checkoutFormValidatorSchema),
@@ -42,7 +44,7 @@ export function Checkout() {
   const { handleSubmit, reset } = checkoutForm
   function handleConfirmOrder(data: ConfirmOrderFormData) {
     confirmOrder(data)
-    console.log(checkout)
+    navigate('/success')
   }
 
   return (

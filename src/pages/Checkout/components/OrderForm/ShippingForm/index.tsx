@@ -40,7 +40,7 @@ export function ShippingForm() {
         <InputForm
           gridColumn="1/4"
           gridRow="2"
-          placeholder="Rua"
+          placeholder="Logradouro"
           type="text"
           {...register('street')}
           error={errors.street?.message}

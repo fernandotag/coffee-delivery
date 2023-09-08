@@ -5,20 +5,23 @@ import { PaymentOption } from '../PaymentOption'
 import { SectionHeader } from '../SectionHeader'
 import { PaymantFormContainer, PaymentOptionsContainer } from './styles'
 
-export const paymentMethods = {
-  credit: {
-    label: 'Credit Card',
+export const paymentMethods = [
+  {
+    key: 'credit',
+    label: 'Cartão de Crédito',
     icon: <CreditCard size={'1rem'} />,
   },
-  debit: {
-    label: 'Debit Card',
+  {
+    key: 'debit',
+    label: 'Cartão de Débito',
     icon: <Bank size={'1rem'} />,
   },
-  money: {
-    label: 'Money',
+  {
+    key: 'money',
+    label: 'Dinheiro',
     icon: <Money size={'1rem'} />,
   },
-}
+]
 
 export function PaymentForm() {
   const {
@@ -39,7 +42,7 @@ export function PaymentForm() {
         }
       />
       <PaymentOptionsContainer>
-        {Object.entries(paymentMethods).map(([key, { label, icon }]) => (
+        {paymentMethods.map(({ icon, label, key }) => (
           <PaymentOption
             key={label}
             id={key}
