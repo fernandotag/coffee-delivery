@@ -85,6 +85,7 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
 
   const confirmOrder = (checkout: Checkout) => {
     setCheckout(checkout)
+    setCart([])
   }
 
   return (
