@@ -38,7 +38,7 @@ export function PaymentForm() {
         icon={<CurrencyDollar size={'1.375rem'}></CurrencyDollar>}
         title={'Pagamento'}
         subtitle={
-          'O pagamento é feito na entega. Escolha a forma que desejar pagar'
+          'O pagamento é feito na entrega. Escolha a forma que desejar pagar'
         }
       />
       <PaymentOptionsContainer>
