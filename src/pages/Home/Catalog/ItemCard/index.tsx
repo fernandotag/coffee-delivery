@@ -3,7 +3,6 @@ import { Minus, Plus, ShoppingCart } from 'phosphor-react'
 import { useContext, useState } from 'react'
 import { CartContext } from '../../../../contexts/CartContext'
 import { formatPrice } from '../../../../util/format'
-
 interface ItemCardProps {
   id: string
   image: string
@@ -45,10 +44,7 @@ export function ItemCard({
 
   return (
     <ItemContainer>
-      <img
-        src={`src/pages/Home/Catalog/assets/coffees/${image}`}
-        alt={`Xícara com ${name}`}
-      />
+      <img src={image} alt={`Xícara com ${name}`} />
       <ul className="tags">
         {tags.map((tag) => (
           <li key={tag}>{tag}</li>

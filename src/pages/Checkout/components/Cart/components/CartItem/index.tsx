@@ -31,10 +31,7 @@ export function CartItem(props: CardItemProps) {
 
   return (
     <CartItemContainer>
-      <img
-        src={`src/pages/Home/Catalog/assets/coffees/${image}`}
-        alt={`Xícara com ${image}`}
-      />
+      <img src={image} alt={`Xícara com ${image}`} />
       <ActionsContainer>
         <div className="name">{name}</div>
         <CounterContainer>

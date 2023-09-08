@@ -2,6 +2,8 @@ import { createContext, ReactNode } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import { CartContextProvider } from './CartContext'
 
+import { allCoffeeImages } from '../pages/Home/Catalog/assets/coffees'
+
 export interface Product {
   id: string
   image: string
@@ -22,7 +24,7 @@ interface CatalogContextProviderProps {
 const coffeeList = [
   {
     id: uuidv4(),
-    image: 'expresso-tradicional.svg',
+    image: allCoffeeImages.expressoTradicional,
     tags: ['tradicional'],
     name: 'Expresso Tradicional',
     description: 'O tradicional café feito com água quente e grãos moídos',
@@ -30,7 +32,7 @@ const coffeeList = [
   },
   {
     id: uuidv4(),
-    image: 'expresso-americano.svg',
+    image: allCoffeeImages.expressoAmericano,
     tags: ['tradicional'],
     name: 'Expresso Americano',
     description: 'Expresso diluído, menos intenso que o tradicional',
@@ -38,7 +40,7 @@ const coffeeList = [
   },
   {
     id: uuidv4(),
-    image: 'expresso-cremoso.svg',
+    image: allCoffeeImages.expressoCremoso,
     tags: ['tradicional'],
     name: 'Expresso Cremoso',
     description: 'Café expresso tradicional com espuma cremosa',
@@ -46,7 +48,7 @@ const coffeeList = [
   },
   {
     id: uuidv4(),
-    image: 'expresso-gelado.svg',
+    image: allCoffeeImages.expressoGelado,
     tags: ['tradicional', 'gelado'],
     name: 'Expresso Gelado',
     description: 'Bebida preparada com café expresso e cubos de gelo',
@@ -54,7 +56,7 @@ const coffeeList = [
   },
   {
     id: uuidv4(),
-    image: 'cafe-com-leite.svg',
+    image: allCoffeeImages.cafeComLeite,
     tags: ['tradicional', 'com leite'],
     name: 'Café com Leite',
     description: 'Meio a meio de expresso tradicional com leite vaporizado',
@@ -62,7 +64,7 @@ const coffeeList = [
   },
   {
     id: uuidv4(),
-    image: 'latte.svg',
+    image: allCoffeeImages.latte,
     tags: ['tradicional', 'com leite'],
     name: 'Latte',
     description:
@@ -71,7 +73,7 @@ const coffeeList = [
   },
   {
     id: uuidv4(),
-    image: 'capuccino.svg',
+    image: allCoffeeImages.capuccino,
     tags: ['tradicional', 'com leite'],
     name: 'Capuccino',
     description:
@@ -80,7 +82,7 @@ const coffeeList = [
   },
   {
     id: uuidv4(),
-    image: 'macchiato.svg',
+    image: allCoffeeImages.macchiato,
     tags: ['tradicional', 'com leite'],
     name: 'Macchiato',
     description:
@@ -89,7 +91,7 @@ const coffeeList = [
   },
   {
     id: uuidv4(),
-    image: 'mocaccino.svg',
+    image: allCoffeeImages.mocaccino,
     tags: ['tradicional', 'com leite'],
     name: 'Mocaccino',
     description: 'Café expresso com calda de chocolate, pouco leite e espuma',
@@ -97,7 +99,7 @@ const coffeeList = [
   },
   {
     id: uuidv4(),
-    image: 'chocolate-quente.svg',
+    image: allCoffeeImages.chocolateQuente,
     tags: ['especial', 'com leite'],
     name: 'Chocolate Quente',
     description: 'Bebida feita com chocolate dissolvido no leite quente e café',
@@ -105,7 +107,7 @@ const coffeeList = [
   },
   {
     id: uuidv4(),
-    image: 'cubano.svg',
+    image: allCoffeeImages.cubano,
     tags: ['especial', 'alcoólico', 'gelado'],
     name: 'Chocolate Quente',
     description:
@@ -114,7 +116,7 @@ const coffeeList = [
   },
   {
     id: uuidv4(),
-    image: 'havaiano.svg',
+    image: allCoffeeImages.havaiano,
     tags: ['especial'],
     name: 'Havaiano',
     description: 'Bebida adocicada preparada com café e leite de coco',
@@ -122,7 +124,7 @@ const coffeeList = [
   },
   {
     id: uuidv4(),
-    image: 'arabe.svg',
+    image: allCoffeeImages.arabe,
     tags: ['especial'],
     name: 'Árabe',
     description: 'Bebida preparada com grãos de café árabe e especiarias',
@@ -130,7 +132,7 @@ const coffeeList = [
   },
   {
     id: uuidv4(),
-    image: 'irlandes.svg',
+    image: allCoffeeImages.irlandes,
     tags: ['especial', 'alcoólico'],
     name: 'Irlandês',
     description: 'Bebida a base de café, uísque irlandês, açúcar e chantilly',
